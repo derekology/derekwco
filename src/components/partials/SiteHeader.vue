@@ -1,7 +1,7 @@
 <template>
     <div id="site-header">
         <div id="site-logo">
-            <a v-on:click="returnToTop();" class="hover-hand">
+            <a v-on:click="scrollToTop();" class="hover-hand">
                 <StackedLogo />
             </a>
         </div>
@@ -13,6 +13,7 @@
 import { defineComponent } from 'vue';
 import StackedLogo from '@/components/partials/LogoStacked.vue';
 import SiteNav from '@/components/partials/SiteNav.vue';
+import ScrollToSectionMixin from '@/assets/mixins/ScrollToSectionMixin.vue';
 
 export default defineComponent({
     name: 'SiteHeader',
@@ -29,18 +30,22 @@ export default defineComponent({
         }
     },
 
+    mixins: [
+        ScrollToSectionMixin,
+    ],
+
     components: {
         StackedLogo,
         SiteNav,
     },
 
     methods: {
-        returnToTop(): void {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth',
-            });
-        }
+        scrollToTop(): void {
+            /**
+             * Scroll to the top section.
+             */
+            ScrollToSectionMixin.methods?.scrollToSection("intro", this.currentSection, -110); // Call the global Mixin to scroll to top section
+        },
     }
 });
 </script>
