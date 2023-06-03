@@ -2,7 +2,7 @@
     <div id="site-header">
         <div id="site-logo">
             <a v-on:click="scrollToTop();" class="hover-hand">
-                <StackedLogo />
+                <AbbrevLogo />
             </a>
         </div>
         <SiteNav :currentSection="currentSection" :allSections="allSections" />
@@ -11,12 +11,13 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import StackedLogo from '@/components/partials/LogoStacked.vue';
+import AbbrevLogo from '@/components/partials/LogoAbbrev.vue';
 import SiteNav from '@/components/partials/SiteNav.vue';
 import ScrollToSectionMixin from '@/assets/mixins/ScrollToSectionMixin.vue';
 
 export default defineComponent({
     name: 'SiteHeader',
+
     props: {
         currentSection: {
             type: String,
@@ -35,7 +36,7 @@ export default defineComponent({
     ],
 
     components: {
-        StackedLogo,
+        AbbrevLogo,
         SiteNav,
     },
 
@@ -58,10 +59,10 @@ export default defineComponent({
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 25px;
+    padding: 23px 25px;
 }
 
 #site-logo {
-    width: 125px;
+    width: 75px;
 }
 </style>
