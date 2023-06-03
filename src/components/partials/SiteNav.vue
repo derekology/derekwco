@@ -17,9 +17,11 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import ScrollToSectionMixin from '@/assets/mixins/ScrollToSectionMixin.vue';
 
 export default defineComponent({
     name: 'SiteNav',
+
     props: {
         currentSection: {
             type: String,
@@ -33,6 +35,10 @@ export default defineComponent({
             default: () => ['Home'],
         },
     },
+
+    mixins: [
+        ScrollToSectionMixin,
+    ],
 
     data() {
         return {
@@ -99,16 +105,7 @@ export default defineComponent({
              * 
              * @param {string} desiredSection - The section to scroll to
              */
-            const desiredElement: HTMLElement | null = document.querySelector(`#${desiredSection.toLowerCase()}-section`)
-
-            if (desiredElement && desiredElement.dataset.sectionName !== this.currentSection) {
-                const elementLocation = desiredElement?.getBoundingClientRect().top + window.pageYOffset - 110;
-
-                window.scrollTo({
-                    top: elementLocation,
-                    behavior: 'smooth',
-                });
-            }
+            ScrollToSectionMixin.methods?.scrollToSection(desiredSection, this.currentSection, -110); // Call the global Mixin to scroll to desired section
         },
     },
 
