@@ -105,7 +105,7 @@ export default defineComponent({
              * 
              * @param {string} desiredSection - The section to scroll to
              */
-            ScrollToSectionMixin.methods?.scrollToSection(desiredSection, this.currentSection, -110); // Call the global Mixin to scroll to desired section
+            ScrollToSectionMixin.methods?.scrollToSection(desiredSection, this.currentSection, -120); // Call the global Mixin to scroll to desired section
         },
     },
 
@@ -122,6 +122,8 @@ export default defineComponent({
     font-size: 2rem;
     padding: 5px;
     width: 200px;
+    line-height: 1.6;
+    font-family: 'Lato', 'Segoe UI', 'Helvetica Neue', sans-serif;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -146,9 +148,9 @@ export default defineComponent({
 #nav-menu {
     display: block;
     position: fixed;
-    top: 29px;
+    top: 31px;
     left: 25px;
-    background: var(--color-border-hover);
+    background: var(--color-border-hover-90);
     border-radius: 10px;
 }
 
