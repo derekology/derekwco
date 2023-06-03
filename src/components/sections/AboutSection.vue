@@ -7,17 +7,11 @@
     <div id="about-body">
         <div id="about-text">
             <p>
-                Hi there! My name is Derek, and I'm a Computer Systems Technology student at the British Columbia Institute
+                I'm Derek, a Computer Systems Technology student at the British Columbia Institute
                 of Technology (BCIT). Prior to my tech journey, I had a background in business administration and marketing
                 automation working with companies such as <a href="https://www.ceridian.com/" target="_blank">Ceridian</a>,
                 <a href="https://www.rockymountaineer.com/" target="_blank">Rocky Mountaineer</a>, and <a
                     href="https://www.spud.ca/" target="_blank">Spud</a>.
-            </p>
-            <p>
-                At BCIT, I've had the opportunity to delve into software development head-on. I've
-                built some fun projects along the way. If you're curious, you can check out my academic and personal <a
-                    href="https://github.com/derekology/" target="_blank">GitHub profile</a> or connect with me on <a
-                    href="https://www.linkedin.com/in/derekology/" target="_blank">LinkedIn</a>.
             </p>
             <p>
                 When not diving into some kind of project, I can be found watching hockey, attending airshows and/or
@@ -80,8 +74,8 @@ export default defineComponent({
 #about-text {
     background-color: var(--color-border);
     border-radius: 20px;
-    max-width: 80%;
-    padding: 75px 35px 45px 35px;
+    max-width: 90%;
+    padding: 75px 5% 35px;
 }
 
 #about-text p {
