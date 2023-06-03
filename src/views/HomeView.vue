@@ -121,10 +121,12 @@ export default defineComponent({
 <style scoped>
 .section {
   margin-top: 110px;
-  min-height: calc(100vh - 110px);
+  min-height: calc(100vh - 120px);
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  padding-bottom: 2em;
 }
 
 #intro-section {
@@ -137,5 +139,6 @@ export default defineComponent({
   top: 5px;
   width: 100%;
   height: 100px;
+  z-index: 999;
 }
 </style>

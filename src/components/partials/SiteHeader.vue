@@ -45,7 +45,7 @@ export default defineComponent({
             /**
              * Scroll to the top section.
              */
-            ScrollToSectionMixin.methods?.scrollToSection("intro", this.currentSection, -110); // Call the global Mixin to scroll to top section
+            ScrollToSectionMixin.methods?.scrollToSection('intro', this.currentSection, -120); // Call the global Mixin to scroll to top section
         },
     }
 });
@@ -54,7 +54,6 @@ export default defineComponent({
 <style scoped>
 #site-header {
     background-color: var(--color-background-soft);
-    z-index: 999;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
