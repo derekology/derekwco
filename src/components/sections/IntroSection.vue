@@ -6,7 +6,7 @@
         <div id="intro-logo">
             <HorizontalLogo />
         </div>
-        <div id="intro-tagline">Computer Systems Technology student at the British Columbia Institute of Technology</div>
+        <div id="intro-tagline"><em>tech-driven problem solver with a business background</em></div>
     </div>
     <div id="down-arrow" class="animate-bounce hover-hand" v-on:click="scrollToNextSection()">
         <DownArrowIcon />
@@ -15,7 +15,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import SocialButtons from '@/components/partials/SocialButtons.vue';
+import SocialButtons from '@/components/partials/ButtonSocial.vue';
 import DownArrowIcon from '@/components/partials/IconDownArrow.vue';
 import HorizontalLogo from '@/components/partials/LogoHorizontal.vue';
 import ScrollToSectionMixin from '@/assets/mixins/ScrollToSectionMixin.vue';
@@ -35,51 +35,57 @@ export default defineComponent({
 
     methods: {
         animateLogo(): void {
-            const logo = document.getElementById("intro-logo");
+            /**
+             * Animate the logo in the intro section.
+             */
+            const logo = document.getElementById('intro-logo');
             if (logo) {
                 logo.animate([
-                    { opacity: 0, transform: "translateY(50px)" },
-                    { opacity: 0, transform: "translateY(50px)" },
-                    { opacity: 0, transform: "translateY(50px)" },
-                    { opacity: 0, transform: "translateY(50px)" },
-                    { opacity: 1, transform: "translateY(50px)" },
-                    { opacity: 1, transform: "translateY(50px)" },
-                    { opacity: 1, transform: "translateY(50px)" },
-                    { opacity: 1, transform: "translateY(50px)" },
-                    { opacity: 1, transform: "translateY(50px)" },
-                    { opacity: 1, transform: "translateY(50px)" },
-                    { opacity: 1, transform: "translateY(50px)" },
-                    { opacity: 1, transform: "translateY(50px)" },
-                    { opacity: 1, transform: "translateY(50px)" },
-                    { opacity: 1, transform: "translateY(50px)" },
-                    { opacity: 1, transform: "translateY(50px)" },
-                    { opacity: 1, transform: "translateY(50px)" },
-                    { opacity: 1, transform: "translateY(50px)" },
-                    { opacity: 1, transform: "translateY(50px)" },
-                    { opacity: 1, transform: "translateY(50px)" },
-                    { opacity: 1, transform: "translateY(0px)" },
-                    { opacity: 1, transform: "translateY(0px)" },
-                    { opacity: 1, transform: "translateY(0px)" },
-                    { opacity: 1, transform: "translateY(0px)" },
-                    { opacity: 1, transform: "translateY(0px)" },
-                    { opacity: 1, transform: "translateY(0px)" },
-                    { opacity: 1, transform: "translateY(0px)" },
-                    { opacity: 1, transform: "translateY(0px)" },
-                    { opacity: 1, transform: "translateY(0px)" },
+                    { opacity: 0, transform: 'translateY(50px)' },
+                    { opacity: 0, transform: 'translateY(50px)' },
+                    { opacity: 0, transform: 'translateY(50px)' },
+                    { opacity: 0, transform: 'translateY(50px)' },
+                    { opacity: 1, transform: 'translateY(50px)' },
+                    { opacity: 1, transform: 'translateY(50px)' },
+                    { opacity: 1, transform: 'translateY(50px)' },
+                    { opacity: 1, transform: 'translateY(50px)' },
+                    { opacity: 1, transform: 'translateY(50px)' },
+                    { opacity: 1, transform: 'translateY(50px)' },
+                    { opacity: 1, transform: 'translateY(50px)' },
+                    { opacity: 1, transform: 'translateY(50px)' },
+                    { opacity: 1, transform: 'translateY(50px)' },
+                    { opacity: 1, transform: 'translateY(50px)' },
+                    { opacity: 1, transform: 'translateY(50px)' },
+                    { opacity: 1, transform: 'translateY(50px)' },
+                    { opacity: 1, transform: 'translateY(50px)' },
+                    { opacity: 1, transform: 'translateY(50px)' },
+                    { opacity: 1, transform: 'translateY(50px)' },
+                    { opacity: 1, transform: 'translateY(0px)' },
+                    { opacity: 1, transform: 'translateY(0px)' },
+                    { opacity: 1, transform: 'translateY(0px)' },
+                    { opacity: 1, transform: 'translateY(0px)' },
+                    { opacity: 1, transform: 'translateY(0px)' },
+                    { opacity: 1, transform: 'translateY(0px)' },
+                    { opacity: 1, transform: 'translateY(0px)' },
+                    { opacity: 1, transform: 'translateY(0px)' },
+                    { opacity: 1, transform: 'translateY(0px)' },
                 ],
                     {
                         duration: 3000,
-                        easing: "ease-in-out",
-                        fill: "forwards",
+                        easing: 'ease-in-out',
+                        fill: 'forwards',
                         delay: 500,
                     });
             }
         },
 
         animateOtherElements(): void {
-            const tagline = document.getElementById("intro-tagline");
-            const socialButtons = document.getElementById("social-buttons");
-            const downArrow = document.getElementById("down-arrow");
+            /**
+             * Animate the other elements in the intro section.
+             */
+            const tagline = document.getElementById('intro-tagline');
+            const socialButtons = document.getElementById('social-buttons');
+            const downArrow = document.getElementById('down-arrow');
 
             if (tagline && socialButtons && downArrow) {
                 tagline.animate([
@@ -87,8 +93,8 @@ export default defineComponent({
                     { opacity: 1 },
                 ], {
                     duration: 500,
-                    easing: "ease-in-out",
-                    fill: "forwards",
+                    easing: 'ease-in-out',
+                    fill: 'forwards',
                     delay: 2400,
                 });
                 socialButtons.animate([
@@ -96,8 +102,8 @@ export default defineComponent({
                     { opacity: 1 },
                 ], {
                     duration: 500,
-                    easing: "ease-in-out",
-                    fill: "forwards",
+                    easing: 'ease-in-out',
+                    fill: 'forwards',
                     delay: 2400,
                 });
                 downArrow.animate([
@@ -105,20 +111,26 @@ export default defineComponent({
                     { opacity: 1 },
                 ], {
                     duration: 500,
-                    easing: "ease-in-out",
-                    fill: "forwards",
+                    easing: 'ease-in-out',
+                    fill: 'forwards',
                     delay: 2400,
                 });
             }
         },
 
         animateIntro(): void {
+            /**
+             * Animate the intro section.
+             */
             this.animateLogo();
             this.animateOtherElements();
         },
 
         scrollToNextSection(): void {
-            ScrollToSectionMixin.methods?.scrollToSection("projects", "intro", 0); // Call the global Mixin to scroll to the next section
+            /**
+             * Scroll to the next section.
+             */
+            ScrollToSectionMixin.methods?.scrollToSection('projects', 'intro', -5); // Call the global Mixin to scroll to the next section
         },
     },
 
@@ -141,7 +153,8 @@ export default defineComponent({
 
 #social-buttons {
     display: flex;
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-right: 10px;
     width: 100%;
     flex-direction: column;
     justify-content: flex-start;

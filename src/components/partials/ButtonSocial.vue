@@ -25,9 +25,8 @@ export default defineComponent({
 <style scoped>
 .social-icon {
     color: var(--color-text);
-    margin-top: 0.1rem;
-    margin-bottom: 0.1rem;
-    margin-right: 10px;
+    margin: 10px 20px;
+    transform: scale(1.5)
 }
 
 .social-icon:hover {
