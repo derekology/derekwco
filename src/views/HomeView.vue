@@ -9,13 +9,19 @@
       <IntroSection />
     </div>
     <div id="projects-section" class="section" data-section-name="Projects" ref="projects">
-      <ProjectSection />
+      <animated-component animationType="fade">
+        <ProjectSection />
+      </animated-component>
     </div>
     <div id="skills-section" class="section" data-section-name="Skills" ref="skills">
-      <SkillSection />
+      <animated-component animationType="fade">
+        <SkillSection />
+      </animated-component>
     </div>
     <div id="about-section" class="section" data-section-name="About" ref="about">
-      <AboutSection />
+      <animated-component animationType="fade">
+        <AboutSection />
+      </animated-component>
     </div>
   </main>
 </template>
@@ -31,6 +37,7 @@ import AboutSection from '@/components/sections/AboutSection.vue';
 
 export default defineComponent({
   name: 'HomeView',
+
   components: {
     SiteHeader,
     AnimatedComponent,
@@ -79,7 +86,7 @@ export default defineComponent({
             }
           },
           {
-            threshold: 0.5
+            threshold: 0.75,
           });
 
         observer.observe(section);
