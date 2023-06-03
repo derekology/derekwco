@@ -34,10 +34,97 @@ export default defineComponent({
     ],
 
     methods: {
+        animateLogo(): void {
+            const logo = document.getElementById("intro-logo");
+            if (logo) {
+                logo.animate([
+                    { opacity: 0, transform: "translateY(50px)" },
+                    { opacity: 0, transform: "translateY(50px)" },
+                    { opacity: 0, transform: "translateY(50px)" },
+                    { opacity: 0, transform: "translateY(50px)" },
+                    { opacity: 1, transform: "translateY(50px)" },
+                    { opacity: 1, transform: "translateY(50px)" },
+                    { opacity: 1, transform: "translateY(50px)" },
+                    { opacity: 1, transform: "translateY(50px)" },
+                    { opacity: 1, transform: "translateY(50px)" },
+                    { opacity: 1, transform: "translateY(50px)" },
+                    { opacity: 1, transform: "translateY(50px)" },
+                    { opacity: 1, transform: "translateY(50px)" },
+                    { opacity: 1, transform: "translateY(50px)" },
+                    { opacity: 1, transform: "translateY(50px)" },
+                    { opacity: 1, transform: "translateY(50px)" },
+                    { opacity: 1, transform: "translateY(50px)" },
+                    { opacity: 1, transform: "translateY(50px)" },
+                    { opacity: 1, transform: "translateY(50px)" },
+                    { opacity: 1, transform: "translateY(50px)" },
+                    { opacity: 1, transform: "translateY(0px)" },
+                    { opacity: 1, transform: "translateY(0px)" },
+                    { opacity: 1, transform: "translateY(0px)" },
+                    { opacity: 1, transform: "translateY(0px)" },
+                    { opacity: 1, transform: "translateY(0px)" },
+                    { opacity: 1, transform: "translateY(0px)" },
+                    { opacity: 1, transform: "translateY(0px)" },
+                    { opacity: 1, transform: "translateY(0px)" },
+                    { opacity: 1, transform: "translateY(0px)" },
+                ],
+                    {
+                        duration: 3000,
+                        easing: "ease-in-out",
+                        fill: "forwards",
+                        delay: 500,
+                    });
+            }
+        },
+
+        animateOtherElements(): void {
+            const tagline = document.getElementById("intro-tagline");
+            const socialButtons = document.getElementById("social-buttons");
+            const downArrow = document.getElementById("down-arrow");
+
+            if (tagline && socialButtons && downArrow) {
+                tagline.animate([
+                    { opacity: 0 },
+                    { opacity: 1 },
+                ], {
+                    duration: 500,
+                    easing: "ease-in-out",
+                    fill: "forwards",
+                    delay: 2400,
+                });
+                socialButtons.animate([
+                    { opacity: 0 },
+                    { opacity: 1 },
+                ], {
+                    duration: 500,
+                    easing: "ease-in-out",
+                    fill: "forwards",
+                    delay: 2400,
+                });
+                downArrow.animate([
+                    { opacity: 0 },
+                    { opacity: 1 },
+                ], {
+                    duration: 500,
+                    easing: "ease-in-out",
+                    fill: "forwards",
+                    delay: 2400,
+                });
+            }
+        },
+
+        animateIntro(): void {
+            this.animateLogo();
+            this.animateOtherElements();
+        },
+
         scrollToNextSection(): void {
             ScrollToSectionMixin.methods?.scrollToSection("projects", "intro", 0); // Call the global Mixin to scroll to the next section
         },
-    }
+    },
+
+    mounted() {
+        this.animateIntro();
+    },
 });
 </script>
 
@@ -46,6 +133,11 @@ export default defineComponent({
     flex-grow: 1;
 }
 
+#social-buttons,
+#intro-tagline,
+#down-arrow {
+    opacity: 0;
+}
 
 #social-buttons {
     display: flex;
@@ -72,6 +164,7 @@ export default defineComponent({
     max-width: 250px;
     min-width: 60px;
     margin-bottom: 10px;
+    opacity: 0;
 }
 
 #intro-tagline {
