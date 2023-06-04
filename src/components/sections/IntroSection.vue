@@ -165,9 +165,8 @@ export default defineComponent({
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-bottom: 6em;
     width: 80%;
-    flex-grow: 3;
+    flex-grow: 1;
 }
 
 #intro-logo {
@@ -189,7 +188,7 @@ export default defineComponent({
     text-align: center;
     font-size: small;
     font-style: italic;
-    padding-bottom: 5em;
+    padding-bottom: 10em;
 }
 
 #down-arrow svg {
