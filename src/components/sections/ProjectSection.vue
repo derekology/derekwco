@@ -30,28 +30,28 @@ export default defineComponent({
             projects: [
                 {
                     name: 'Outfit Picker',
-                    image: '/public/assets/projects/outfit-picker/1.png',
+                    image: '/assets/projects/outfit-picker/1.png',
                     description: 'Weather-aware outfit picker',
                     technologies: ['Vue.js', 'GraphQL', 'Express.js'],
                     link: 'https://outfitpicker.wooprojects.com/'
                 },
                 {
                     name: 'Pass The Class',
-                    image: '/public/assets/projects/pass-the-class/1.png',
+                    image: '/assets/projects/pass-the-class/1.png',
                     description: 'CLI-based dungeon game',
                     technologies: ['Python'],
                     link: 'https://github.com/derekology/Pass-The-Class-CLI-Game/'
                 },
                 {
                     name: 'read',
-                    image: '/public/assets/projects/read/1.png',
+                    image: '/assets/projects/read/1.png',
                     description: 'Blog',
                     technologies: ['Wordpress', 'WPBakery Builder'],
                     link: 'https://derekw.co/'
                 },
                 {
                     name: 'myMKTO',
-                    image: '/public/assets/projects/mymkto/1.png',
+                    image: '/assets/projects/mymkto/1.png',
                     description: 'Marketo Quick Answers',
                     technologies: ['Wordpress'],
                     link: 'https://mymkto.com/'
