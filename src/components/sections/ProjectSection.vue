@@ -15,7 +15,7 @@
                         <span class="project-technology" v-for="technology in project.technologies" :key="technology">{{
                             technology }}</span>
                     </div>
-                    <a :href="project.link" target="_blank">View Project</a>
+                    <div class="project-link"><a :href="project.link" target="_blank">View Project</a></div>
                 </div>
             </div>
         </div>
@@ -100,7 +100,7 @@ export default defineComponent({
 .project-name,
 .project-details-name {
     font-family: 'Lato Bold', sans-serif;
-    font-size: 5vw;
+    font-size: 32px;
     transition: all 0.2s ease-in-out;
 }
 
@@ -109,20 +109,22 @@ export default defineComponent({
     transition: all 0.2s ease-in-out;
 }
 
-.project-details {
+.project-details * {
     opacity: 0;
     height: 0px;
 }
 
-.project-details a {
+.project-details .project-link {
+    display: block;
+    width: auto;
     color: var(--vt-c-text-dark-3);
 }
 
-.project-details a:hover {
+.project-details .project-link:hover {
     color: var(--vt-c-text-dark-1);
 }
 
-.project:hover .project-details {
+.project:hover .project-details * {
     opacity: 1;
     height: auto;
     transition: all 0.2s ease-in-out;
