@@ -6,16 +6,24 @@
       </animated-component>
     </div>
     <div id="intro-section" class="section" data-section-name="Intro" ref="intro">
-      <IntroSection />
+      <div class="section-body">
+        <IntroSection />
+      </div>
     </div>
     <div id="projects-section" class="section" data-section-name="Projects" ref="projects">
-      <ProjectSection />
+      <div class="section-body">
+        <ProjectSection />
+      </div>
     </div>
     <div id="skills-section" class="section" data-section-name="Skills" ref="skills">
-      <SkillSection />
+      <div class="section-body">
+        <SkillSection />
+      </div>
     </div>
     <div id="about-section" class="section" data-section-name="About" ref="about">
-      <AboutSection />
+      <div class="section-body">
+        <AboutSection />
+      </div>
     </div>
   </main>
 </template>
@@ -120,11 +128,21 @@ export default defineComponent({
   align-items: center;
   justify-content: center;
   padding-top: 1em;
+  padding-bottom: 1em;
 }
 
-.section:not(#intro-section, #projects-section) {
-  padding-top: 7em;
-  padding-bottom: 1em;
+.section-body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-body:not(#intro-section>*, #projects-section>*) {
+  padding-top: 5em;
+  padding-bottom: 5em;
 }
 
 #intro-section {
