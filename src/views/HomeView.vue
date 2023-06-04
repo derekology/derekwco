@@ -120,6 +120,10 @@ export default defineComponent({
   align-items: center;
   justify-content: center;
   padding-top: 1em;
+}
+
+.section:not(#intro-section, #projects-section) {
+  padding-top: 7em;
   padding-bottom: 1em;
 }
 
