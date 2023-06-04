@@ -9,19 +9,13 @@
       <IntroSection />
     </div>
     <div id="projects-section" class="section" data-section-name="Projects" ref="projects">
-      <animated-component animationType="fade">
-        <ProjectSection />
-      </animated-component>
+      <ProjectSection />
     </div>
     <div id="skills-section" class="section" data-section-name="Skills" ref="skills">
-      <animated-component animationType="fade">
-        <SkillSection />
-      </animated-component>
+      <SkillSection />
     </div>
     <div id="about-section" class="section" data-section-name="About" ref="about">
-      <animated-component animationType="fade">
-        <AboutSection />
-      </animated-component>
+      <AboutSection />
     </div>
   </main>
 </template>
@@ -49,7 +43,7 @@ export default defineComponent({
 
   data() {
     return {
-      currentSection: 'intro-section',
+      currentSection: 'Intro',
     };
   },
 
@@ -86,7 +80,7 @@ export default defineComponent({
             }
           },
           {
-            threshold: 0.75,
+            threshold: 0.55,
           });
 
         observer.observe(section);
@@ -126,7 +120,8 @@ export default defineComponent({
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-bottom: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 #intro-section {
