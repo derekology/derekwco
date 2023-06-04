@@ -72,7 +72,6 @@ export default defineComponent({
 .project {
     height: 33.33vh;
     min-height: 280px;
-    max-height: 450px;
     display: flex;
     justify-content: center;
     background-position: center;
@@ -112,18 +111,18 @@ export default defineComponent({
     transition: all 0.2s ease-in-out;
 }
 
-.project:hover .project-details {
-    opacity: 1;
-    height: 55%;
-    transition: all 0.2s ease-in-out;
-}
-
 .project-details a {
     color: var(--vt-c-text-dark-3);
 }
 
 .project-details a:hover {
     color: var(--vt-c-text-dark-1);
+}
+
+.project:hover .project-details {
+    opacity: 1;
+    height: 55%;
+    transition: all 0.2s ease-in-out;
 }
 
 .project-technologies {
