@@ -106,7 +106,7 @@ export default defineComponent({
              * @param {string} desiredSection - The section to scroll to
              */
             ScrollToSectionMixin.methods?.scrollToSection(desiredSection, this.currentSection, -105); // Call the global Mixin to scroll to desired section
-            this.showMenu = false;
+            this.showMenu = !this.showMenu;
         },
     },
 
