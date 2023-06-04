@@ -80,7 +80,7 @@ export default defineComponent({
             }
           },
           {
-            threshold: 0.33,
+            threshold: 0.55,
           });
 
         observer.observe(section);
@@ -114,7 +114,6 @@ export default defineComponent({
 
 <style scoped>
 .section {
-  margin-top: 110px;
   min-height: calc(100vh - 120px);
   display: flex;
   flex-direction: column;
@@ -125,7 +124,6 @@ export default defineComponent({
 }
 
 #intro-section {
-  margin-top: 0px;
   height: 100vh;
 }
 
