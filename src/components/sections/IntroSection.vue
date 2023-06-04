@@ -192,6 +192,7 @@ export default defineComponent({
 }
 
 #down-arrow svg {
-    margin-top: 1em;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 </style>
