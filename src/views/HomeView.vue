@@ -141,8 +141,7 @@ export default defineComponent({
 }
 
 .section-body:not(#intro-section>*, #projects-section>*) {
-  padding-top: 5em;
-  padding-bottom: 5em;
+  padding: 5em 2.5%;
 }
 
 #intro-section {
