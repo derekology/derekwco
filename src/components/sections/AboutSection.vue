@@ -8,19 +8,11 @@
         <div id="about-text">
             <p>
                 I'm Derek, a Computer Systems Technology student at the British Columbia Institute
-                of Technology (BCIT). Prior to my tech journey, I had a background in business administration and marketing
+                of Technology (BCIT) with a passion for using technology to solve real-world problems. Prior to my tech
+                journey, I had a background in business administration and marketing
                 automation working with companies such as <a href="https://www.ceridian.com/" target="_blank">Ceridian</a>,
                 <a href="https://www.rockymountaineer.com/" target="_blank">Rocky Mountaineer</a>, and <a
                     href="https://www.spud.ca/" target="_blank">Spud</a>.
-            </p>
-            <p>
-                When not diving into some kind of project, I can be found watching hockey, attending airshows and/or
-                visiting museums. I really enjoy sharing my experiences through writing as well, whether going through—in
-                meticulous detail—the <a href="https://derekw.co/sports/identity-crisis/" target="_blank">Vancouver Canucks’
-                    entire jersey history</a> or lamenting <a href="https://derekw.co/sports/identity-crisis/"
-                    target="_blank">
-                    how much the community I grew up
-                    in has changed</a>.
             </p>
             <div id="about-certifications">
                 <ProfileCertifications />
@@ -69,6 +61,7 @@ export default defineComponent({
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 45px;
 }
 
 #about-text {
