@@ -189,10 +189,10 @@ export default defineComponent({
     text-align: center;
     font-size: small;
     font-style: italic;
+    padding-bottom: 5em;
 }
 
 #down-arrow svg {
-    margin-top: 2em;
-    margin-bottom: 2em;
+    margin-top: 1em;
 }
 </style>
