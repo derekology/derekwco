@@ -1,10 +1,10 @@
 <template>
-    <div id="site-nav" v-on:mouseover="showMenu = true" v-on:mouseleave="showMenu = false">
-        <div id="nav-current-section" v-show="!showMenu" class="hover-hand">
+    <div id="site-nav">
+        <div id="nav-current-section" v-show="!showMenu" class="hover-hand" v-on:mouseover="showMenu = true">
             <span id="nav-current-text">{{ currentSection }}</span>
         </div>
         <Transition>
-            <div id="nav-menu" v-show="showMenu" class="hover-hand">
+            <div id="nav-menu" v-show="showMenu" class="hover-hand" v-on:mouseleave="showMenu = false">
                 <ul>
                     <li v-for="section in inactiveSections" :key="section" class="nav-item">
                         <a v-on:click="scrollToSection(section)" :id="section">{{ section }}</a>
