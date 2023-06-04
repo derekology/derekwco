@@ -7,6 +7,9 @@
                     <h2>{{ project.name }}</h2>
                 </div>
                 <div class="project-details">
+                    <div class="project-details-name section-header">
+                        <h2>{{ project.name }}</h2>
+                    </div>
                     <p>{{ project.description }}</p>
                     <div class="project-technologies">
                         <span class="project-technology" v-for="technology in project.technologies" :key="technology">{{
@@ -45,14 +48,14 @@ export default defineComponent({
                 {
                     name: 'read',
                     image: '/assets/projects/read/1.png',
-                    description: 'Blog',
+                    description: 'Content blog',
                     technologies: ['Wordpress', 'WPBakery Builder'],
                     link: 'https://derekw.co/'
                 },
                 {
                     name: 'myMKTO',
                     image: '/assets/projects/mymkto/1.png',
-                    description: 'Marketo Quick Answers',
+                    description: 'Marketo Quick Reference Guide',
                     technologies: ['Wordpress'],
                     link: 'https://mymkto.com/'
                 },
@@ -89,26 +92,26 @@ export default defineComponent({
     padding: 45px 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
-.project-name {
+.project-name,
+.project-details-name {
     font-family: 'Lato Bold', sans-serif;
     font-size: 5vw;
     transition: all 0.2s ease-in-out;
 }
 
 .project:hover .project-name {
+    display: none;
     transition: all 0.2s ease-in-out;
 }
 
 .project-details {
     opacity: 0;
     height: 0px;
-    transition: all 0.2s ease-in-out;
 }
 
 .project-details a {
@@ -121,7 +124,7 @@ export default defineComponent({
 
 .project:hover .project-details {
     opacity: 1;
-    height: 55%;
+    height: auto;
     transition: all 0.2s ease-in-out;
 }
 
