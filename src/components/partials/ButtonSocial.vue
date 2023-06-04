@@ -14,12 +14,12 @@ import LinkedinIcon from '@/components/partials/IconLinkedin.vue'
 
 export default defineComponent({
     name: 'SocialButtons',
+
     components: {
         LinkedinIcon,
         GithubIcon,
     },
 });
-
 </script>
 
 <style scoped>

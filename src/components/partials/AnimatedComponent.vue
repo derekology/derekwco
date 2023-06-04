@@ -13,6 +13,7 @@ import { onMounted, ref, defineComponent } from 'vue';
 
 export default defineComponent({
     name: 'AnimatedComponent',
+
     props: {
         animationType: {
             type: String,
