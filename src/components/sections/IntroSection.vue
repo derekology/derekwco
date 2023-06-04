@@ -153,8 +153,7 @@ export default defineComponent({
 
 #social-buttons {
     display: flex;
-    margin-top: 20px;
-    margin-right: 10px;
+    margin-right: 20px;
     width: 100%;
     flex-direction: column;
     justify-content: flex-start;
