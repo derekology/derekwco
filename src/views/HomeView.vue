@@ -80,7 +80,7 @@ export default defineComponent({
             }
           },
           {
-            threshold: 0.55,
+            threshold: 0.66,
           });
 
         observer.observe(section);
