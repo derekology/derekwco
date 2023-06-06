@@ -95,7 +95,7 @@ export default defineComponent({
                     duration: 500,
                     easing: 'ease-in-out',
                     fill: 'forwards',
-                    delay: 2400,
+                    delay: 3000,
                 });
                 socialButtons.animate([
                     { opacity: 0 },
@@ -104,7 +104,7 @@ export default defineComponent({
                     duration: 500,
                     easing: 'ease-in-out',
                     fill: 'forwards',
-                    delay: 2400,
+                    delay: 3000,
                 });
                 downArrow.animate([
                     { opacity: 0 },
@@ -113,7 +113,7 @@ export default defineComponent({
                     duration: 500,
                     easing: 'ease-in-out',
                     fill: 'forwards',
-                    delay: 2400,
+                    delay: 3000,
                 });
             }
         },
