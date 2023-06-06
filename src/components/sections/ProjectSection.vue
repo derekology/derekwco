@@ -46,11 +46,11 @@ export default defineComponent({
                     link: 'https://github.com/derekology/Pass-The-Class-CLI-Game/'
                 },
                 {
-                    name: 'read',
-                    image: '/assets/projects/read/1.png',
-                    description: 'Content blog',
-                    technologies: ['Wordpress', 'WPBakery Builder'],
-                    link: 'https://derekw.co/'
+                    name: '::musings',
+                    image: '/assets/projects/musings/1.png',
+                    description: 'Front end for blog content',
+                    technologies: ['Vue.js', 'Wordpress', 'REST API'],
+                    link: 'https://musings.wooprojects.com/'
                 },
                 {
                     name: 'myMKTO',
@@ -92,7 +92,7 @@ export default defineComponent({
     }
 }
 
-Add re .project:hover {
+.project:hover {
     filter: none;
 }
 
