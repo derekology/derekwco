@@ -69,13 +69,15 @@ export default defineComponent({
 #project-list {
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .project {
     height: 33.33vh;
     min-height: 280px;
     display: flex;
+    width: 100%;
     justify-content: center;
     background-position: center;
     background-size: cover;
@@ -84,7 +86,13 @@ export default defineComponent({
     color: var(--vt-c-text-dark-3);
 }
 
-.project:hover {
+@media (min-width:768px) {
+    .project {
+        width: 50%;
+    }
+}
+
+Add re .project:hover {
     filter: none;
 }
 
