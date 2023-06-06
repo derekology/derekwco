@@ -139,7 +139,11 @@ export default defineComponent({
 }
 
 .section-body:not(#intro-section>*, #projects-section>*) {
-  padding: 5em 2.5%;
+  padding: 5em 2.5% 3em 2.5%;
+}
+
+#projects-section .section-body {
+  padding: 2em 0% 2em 0%;
 }
 
 #intro-section {
