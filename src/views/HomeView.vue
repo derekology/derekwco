@@ -122,6 +122,7 @@ export default defineComponent({
 
 <style scoped>
 .section {
+  min-height: calc(100vh - 115px);
   display: flex;
   flex-direction: column;
   align-items: center;
