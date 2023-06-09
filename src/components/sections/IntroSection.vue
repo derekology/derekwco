@@ -6,7 +6,7 @@
         <div id="intro-logo">
             <HorizontalLogo />
         </div>
-        <div id="intro-tagline"><em>tech-driven problem solver with a business background</em></div>
+        <div id="intro-tagline"><em>tech-driven problem solver with a marketing background</em></div>
     </div>
     <div id="down-arrow" class="animate-bounce hover-hand" v-on:click="scrollToNextSection()">
         <DownArrowIcon />
