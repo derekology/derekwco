@@ -1,6 +1,6 @@
 <template>
     <img id="cert-adobe-mce" src="/assets/cert-adobe-mce.png" alt="Adobe Marketo Engage Expert Certification Badge"
-        title="Adobe Marketo Engage Expert Certification" draggable="false" />
+        title="Adobe Marketo Engage Expert Certification" draggable="false" style="background-color: #FFFFFF;" />
     <img id="cert-salesforce-mca" src="/assets/cert-salesforce-mca.png"
         alt="Salesforce Marketing Cloud Administrator Certification Badge"
         title="Salesforce Marketing Cloud Administrator Certification" draggable="false" />
