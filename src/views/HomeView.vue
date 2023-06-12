@@ -52,6 +52,7 @@ export default defineComponent({
   data() {
     return {
       currentSection: 'Intro',
+      viewportHeight: screen.height,
     };
   },
 
@@ -59,6 +60,8 @@ export default defineComponent({
     allSections(): string[] {
       /**
        * Return an array of all sections to be shown in the menu.
+       * 
+       * @returns {string[]} - An array of all items to be shown in the menu
        */
       return this.getMenuItems();
     }
@@ -74,6 +77,25 @@ export default defineComponent({
       return document.querySelectorAll('.section');
     },
 
+    checkForViewportHeightChange(): boolean {
+      /**
+       * Check if the viewport height has changed.
+       * 
+       * @returns {boolean} - True if the screen height has changed, false otherwise
+       */
+      return this.viewportHeight !== window.innerHeight;
+    },
+
+    updateThresholdOnViewportHeightChange(): void {
+      /**
+       * Update the threshold for the IntersectionObserver if the screen height has changed.
+       */
+      if (this.checkForViewportHeightChange()) {
+        this.viewportHeight = window.innerHeight;
+        this.getCurrentSection();
+      }
+    },
+
     getCurrentSection(): void {
       /**
        * Set the current section based on the section that is in view.
@@ -81,6 +103,7 @@ export default defineComponent({
       const allSections: NodeListOf<HTMLElement> = this.getAllSections();
 
       allSections.forEach((section: HTMLElement) => {
+        const threshold = screen.height < 768 ? 0.4 : 0.6;
         const observer = new IntersectionObserver(
           ([entry]) => {
             if (entry.isIntersecting && section.dataset.sectionName) {
@@ -88,7 +111,7 @@ export default defineComponent({
             }
           },
           {
-            threshold: 0.40,
+            threshold: threshold,
           });
 
         observer.observe(section);
@@ -116,7 +139,12 @@ export default defineComponent({
 
   mounted() {
     this.getCurrentSection();
+    window.addEventListener("resize", this.updateThresholdOnViewportHeightChange);
   },
+
+  unmounted() {
+    window.removeEventListener("resize", this.updateThresholdOnViewportHeightChange);
+  }
 });
 </script>
 
