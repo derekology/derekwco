@@ -142,7 +142,10 @@ export default defineComponent({
     padding-top: 1em;
     display: block;
     width: auto;
-    color: var(--vt-c-text-dark-3);
+}
+
+.project-details .project-link a {
+    color: var(--vt-c-text-dark-3) !important;
 }
 
 .project-details .project-link:hover {
