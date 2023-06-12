@@ -103,7 +103,7 @@ export default defineComponent({
       const allSections: NodeListOf<HTMLElement> = this.getAllSections();
 
       allSections.forEach((section: HTMLElement) => {
-        const threshold = screen.height < 768 ? 0.4 : 0.6;
+        const threshold = window.innerHeight < 768 ? 0.25 : 0.6;
         const observer = new IntersectionObserver(
           ([entry]) => {
             if (entry.isIntersecting && section.dataset.sectionName) {
