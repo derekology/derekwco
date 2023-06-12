@@ -13,6 +13,10 @@ export default defineComponent({
   components: {
     RouterView,
   },
+
+  mounted() {
+    console.log(`Hi developer - welcome to my portfolio! If you're curious, this website was built using Vue.js.\n\nPlease let me know if you have any feedback or encounter any bugs!`)
+  }
 });
 </script>
 
