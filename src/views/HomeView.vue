@@ -81,7 +81,7 @@ export default defineComponent({
       /**
        * Check if the viewport height has changed.
        * 
-       * @returns {boolean} - True if the screen height has changed, false otherwise
+       * @returns {boolean} - True if the viewport height has changed, false otherwise
        */
       return this.viewportHeight !== window.innerHeight;
     },

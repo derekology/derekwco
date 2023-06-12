@@ -50,6 +50,8 @@ export default defineComponent({
         inactiveSections: function (): Array<string> {
             /**
              * Return an array of all sections except the current section.
+             * 
+             * @returns {Array<string>} - An array of all sections except the current section
              */
             var modifiedSections = this.allSections.filter((section: string) => section !== this.currentSection);
             modifiedSections.unshift(this.currentSection)
