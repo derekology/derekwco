@@ -145,6 +145,7 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding-top: 1em;
   padding-bottom: 1em;
 }
