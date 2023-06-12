@@ -19,4 +19,8 @@ img {
     height: 75px;
     margin: 15px 25px;
 }
+
+#cert-adobe-mce {
+    background-color: rgba(255, 255, 255, 0.4);
+}
 </style>
