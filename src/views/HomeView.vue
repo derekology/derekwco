@@ -52,7 +52,7 @@ export default defineComponent({
   data() {
     return {
       currentSection: 'Intro',
-      viewportHeight: screen.height,
+      viewportHeight: window.innerHeight,
     };
   },
 
@@ -77,20 +77,11 @@ export default defineComponent({
       return document.querySelectorAll('.section');
     },
 
-    checkForViewportHeightChange(): boolean {
-      /**
-       * Check if the viewport height has changed.
-       * 
-       * @returns {boolean} - True if the viewport height has changed, false otherwise
-       */
-      return this.viewportHeight !== window.innerHeight;
-    },
-
     updateThresholdOnViewportHeightChange(): void {
       /**
        * Update the threshold for the IntersectionObserver if the screen height has changed.
        */
-      if (this.checkForViewportHeightChange()) {
+      if (this.viewportHeight != window.innerHeight) {
         this.viewportHeight = window.innerHeight;
         this.getCurrentSection();
       }
@@ -103,7 +94,7 @@ export default defineComponent({
       const allSections: NodeListOf<HTMLElement> = this.getAllSections();
 
       allSections.forEach((section: HTMLElement) => {
-        const threshold = window.innerHeight < 768 ? 0.25 : 0.6;
+        const threshold = this.viewportHeight < 768 ? 0.25 : 0.6;
         const observer = new IntersectionObserver(
           ([entry]) => {
             if (entry.isIntersecting && section.dataset.sectionName) {
