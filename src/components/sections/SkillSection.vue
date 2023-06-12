@@ -15,7 +15,7 @@
         <span class="section-header">Platforms</span>
         <p>
             Adobe Marketo Engage, Salesforce Marketing / Sales Cloud, MailChimp, MailerLite, Wix, Wordpress,
-            Manjaro, Arch, Ubuntu, Windows
+            Manjaro, Arch Linux, Ubuntu, Windows
         </p>
     </div>
 </template>
