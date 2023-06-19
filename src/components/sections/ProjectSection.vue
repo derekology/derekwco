@@ -35,7 +35,7 @@ export default defineComponent({
                 {
                     name: 'Outfit Picker',
                     image: '/assets/projects/outfit-picker/1.png',
-                    description: 'Weather-aware outfit picker, which was my first self-learn project. I\'m currently working on a rewrite which uses React instead of Vue and MongoDB instead of Postgres.',
+                    description: 'Weather-aware outfit picker, which was my first self-learn project. I\'m currently working on a rewrite to learn React and MongoDB.',
                     technologies: ['Vue.js', 'GraphQL', 'Postgres', 'Express.js'],
                     link: 'https://outfitpicker.wooprojects.com/'
                 },
