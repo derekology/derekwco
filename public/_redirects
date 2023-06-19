@@ -2,4 +2,6 @@
 /culture/*      https://read.derekw.co/culture/:splat    301
 /sports/*       https://read.derekw.co/sports/:splat     301
 /life/*         https://read.derekw.co/life/:splat       301
+/thoughts/*     https://old.derekw.co/thoughts/:splat    301
+/photos/*       https://old.derekw.co/photos/:splat      301
 /*              /index.html                              200
