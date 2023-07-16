@@ -1,10 +1,10 @@
 <template>
-    <div id="site-nav">
+    <div id="mobile-nav">
         <div id="nav-current-section" v-show="!showMenu" class="hover-hand" v-on:mouseover="showMenu = true">
             <span id="nav-current-text">{{ currentSection }}</span>
         </div>
         <Transition>
-            <div id="nav-menu" v-show="showMenu" class="hover-hand" v-on:mouseleave="showMenu = false">
+            <div v-show="showMenu" class="hover-hand nav-menu" v-on:mouseleave="showMenu = false">
                 <ul>
                     <li v-for="section in inactiveSections" :key="section" class="nav-item">
                         <a v-on:click="scrollToSection(section)" :id="section">{{ section }}</a>
@@ -12,6 +12,13 @@
                 </ul>
             </div>
         </Transition>
+    </div>
+    <div id="desktop-nav">
+        <div class="nav-menu">
+            <span v-for="section in allSections" :key="section" class="hover-hand nav-item">
+                <a v-on:click="scrollToSection(section)" :id="section">{{ section }}</a>
+            </span>
+        </div>
     </div>
 </template>
 
@@ -26,13 +33,13 @@ export default defineComponent({
         currentSection: {
             type: String,
             required: false,
-            default: 'Home',
+            default: 'Intro',
         },
 
         allSections: {
             type: Array<string>,
             required: false,
-            default: () => ['Home'],
+            default: () => ['Intro'],
         },
     },
 
@@ -81,11 +88,11 @@ export default defineComponent({
             /**
              * Add the active class to the current section and menu item.
              */
-            const activeItem: HTMLElement | null = document.querySelector(`#${this.currentSection}`);
+            const activeItem: NodeListOf<HTMLElement> = document.querySelectorAll(`#${this.currentSection}`);
             const activeMenuItem: NodeListOf<HTMLElement> = document.querySelectorAll('.nav-item');
 
             if (activeItem) {
-                activeItem.classList.add('active');
+                activeItem.forEach((HTMLElement) => { HTMLElement.classList.add('active') });
             }
 
             if (activeMenuItem[0]) {
@@ -114,15 +121,19 @@ export default defineComponent({
         },
     },
 
+    mounted() {
+        this.manageActiveClass();
+    },
+
     updated() {
-        this.manageActiveClass()
+        this.manageActiveClass();
     },
 });
 </script>
 
 <style scoped>
 #nav-current-section,
-#nav-menu {
+.nav-menu {
     color: var(--color-text);
     font-size: 2rem;
     padding: 5px;
@@ -145,12 +156,12 @@ export default defineComponent({
 }
 
 #nav-current-text,
-#nav-menu a.active {
+.nav-menu a.active {
     color: var(--color-heading);
     font-weight: 800;
 }
 
-#nav-menu {
+#mobile-nav .nav-menu {
     display: block;
     position: fixed;
     top: 31px;
@@ -159,29 +170,29 @@ export default defineComponent({
     border-radius: 10px;
 }
 
-#nav-menu ul {
+#mobile-nav .nav-menu ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-#nav-menu li {
+#mobile-nav .nav-menu li {
     padding-bottom: 5px;
     margin-left: 5px;
     margin-right: 5px;
 }
 
-#nav-menu a {
+.nav-menu a {
     text-decoration: none !important;
     color: var(--color-text);
 }
 
-#nav-menu a:hover:not(.active) {
+.nav-menu a:hover:not(.active) {
     color: var(--color-hover);
     transition: color 0.2s ease-in-out;
 }
 
-#nav-menu .active-menu-item {
+.nav-menu .active-menu-item {
     padding-bottom: 5px;
     margin-bottom: 8px;
     border-bottom: 1px solid var(--color-border-hover);
@@ -196,5 +207,38 @@ export default defineComponent({
 .v-enter-from,
 .v-leave-to {
     opacity: 0;
+}
+
+#desktop-nav {
+    display: none;
+}
+
+@media (min-width:768px) {
+    #mobile-nav {
+        display: none;
+    }
+
+    #desktop-nav {
+        display: flex !important;
+        flex-direction: row;
+        flex-basis: 70%;
+    }
+
+    #desktop-nav .nav-menu {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 0.75em;
+        width: 100% !important;
+        max-width: 550px !important;
+    }
+
+    #desktop-nav .nav-menu .nav-item:first-child {
+        display: none;
+    }
+
+    #desktop-nav .nav-menu .nav-item a {
+        text-decoration: none;
+    }
 }
 </style>
