@@ -22,12 +22,12 @@ export default defineComponent({
         currentSection: {
             type: String,
             required: false,
-            default: 'Home',
+            default: 'Intro',
         },
         allSections: {
             type: Array<string>,
             required: false,
-            default: () => ['Home'],
+            default: () => ['Intro'],
         }
     },
 
