@@ -94,7 +94,7 @@ export default defineComponent({
       const allSections: NodeListOf<HTMLElement> = this.getAllSections();
 
       allSections.forEach((section: HTMLElement) => {
-        const threshold = this.viewportHeight < 768 ? 0.25 : 0.6;
+        const threshold = this.viewportHeight > 768 ? 0.55 : 0.25;
         const observer = new IntersectionObserver(
           ([entry]) => {
             if (entry.isIntersecting && section.dataset.sectionName) {
