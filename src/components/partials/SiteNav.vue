@@ -6,7 +6,8 @@
         <Transition>
             <div v-show="showMenu" class="hover-hand nav-menu" v-on:mouseleave="showMenu = false">
                 <ul>
-                    <li v-for="section in inactiveSections" :key="section" class="nav-item">
+                    <li v-for="section in inactiveSections.filter(section => section !== 'Intro')" :key="section"
+                        class="nav-item">
                         <a v-on:click="scrollToSection(section)" :id="section">{{ section }}</a>
                     </li>
                 </ul>
@@ -15,7 +16,8 @@
     </div>
     <div id="desktop-nav">
         <div class="nav-menu">
-            <span v-for="section in allSections" :key="section" class="hover-hand nav-item">
+            <span v-for="section in allSections.filter(section => section !== 'Intro')" :key="section"
+                class="hover-hand nav-item">
                 <a v-on:click="scrollToSection(section)" :id="section">{{ section }}</a>
             </span>
         </div>
@@ -231,10 +233,6 @@ export default defineComponent({
         padding: 0 0.75em;
         width: 100% !important;
         max-width: 550px !important;
-    }
-
-    #desktop-nav .nav-menu .nav-item:first-child {
-        display: none;
     }
 
     #desktop-nav .nav-menu .nav-item a {
