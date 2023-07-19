@@ -16,6 +16,3 @@ The goal of this refresh is to create a site that showcases my skills, projects,
 ## Contact
 
 If you have any questions about this project, please feel free to reach out to me at me@derekw.co.
-
-
-If you have any questions about this project, please feel free to reach out to me at me@derekw.co.
