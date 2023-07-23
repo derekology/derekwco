@@ -2,7 +2,7 @@
     <div id="skills-list">
         <span class="section-header">Development</span>
         <p>
-            HTML/CSS/JS/TS, EJS, Node.js, Express, Bootstrap, Vue, Google Firebase, Python
+            HTML/CSS/JS/TS, EJS, Node.js, Express, Bootstrap, Vue, React, Google Firebase, Python
         </p>
         <span class="section-header">Automation / Scripting</span>
         <p>
