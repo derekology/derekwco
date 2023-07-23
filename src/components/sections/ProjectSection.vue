@@ -35,12 +35,12 @@ export default defineComponent({
                 {
                     name: 'Outfit Picker',
                     image: '/assets/projects/outfit-picker/1.png',
-                    description: 'Weather-aware outfit picker using the MERN stack. Rewrite of my first self-learn project (Vue, GraphQL, and Postgres) focusing on organization and documentation.',
+                    description: 'Weather-aware outfit picker using the MERN stack. Rewrite of my first personal project (that used Vue, GraphQL, and Postgres) focusing on organization and documentation.',
                     technologies: ['MongoDB', 'Express.js', 'React', 'Node.js'],
                     link: 'https://outfitpicker.wooprojects.com/'
                 },
                 {
-                    name: 'Pass The Class',
+                    name: 'Pass The Class', 
                     image: '/assets/projects/pass-the-class/1.png',
                     description: 'CLI-based dungeon game themed as a college course. Created for a programming class, the focus was on organization, decomposition, documentation, and testing.',
                     technologies: ['Python'],
