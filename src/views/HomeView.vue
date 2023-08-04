@@ -2,7 +2,8 @@
   <main>
     <div id="site-header-container" v-show="currentSection !== 'Intro'">
       <animated-component animationType="fade">
-        <SiteHeader :currentSection="currentSection" :allSections="allSections" />
+        <SiteHeader :currentSection="currentSection" :allSections="allSections" @passDarkModeEnabled="passDarkModeEnabled"
+          :darkModeEnabled="darkModeEnabled" />
       </animated-component>
     </div>
     <div id="intro-section" class="section" data-section-name="Intro" ref="intro">
@@ -40,6 +41,13 @@ import AboutSection from '@/components/sections/AboutSection.vue';
 export default defineComponent({
   name: 'HomeView',
 
+  props: {
+    darkModeEnabled: {
+      type: Boolean,
+      required: true,
+    },
+  },
+
   components: {
     SiteHeader,
     AnimatedComponent,
@@ -68,6 +76,13 @@ export default defineComponent({
   },
 
   methods: {
+    passDarkModeEnabled(): void {
+      /**
+       * Pass the dark mode enabled state from child.
+       */
+      this.$emit('toggleDarkModeEnabled');
+    },
+
     getAllSections(): NodeListOf<HTMLElement> {
       /**
        * Return a list of all sections on the page.
