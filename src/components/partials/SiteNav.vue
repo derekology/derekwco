@@ -163,10 +163,15 @@ export default defineComponent({
     font-weight: 800;
 }
 
+#mobile-nav {
+    min-width: 200px;
+    height: 62px;
+}
+
 #mobile-nav .nav-menu {
     display: block;
     position: fixed;
-    top: 31px;
+    top: 28px;
     left: 25px;
     background: var(--color-border-hover-90);
     border-radius: 10px;
@@ -201,6 +206,10 @@ export default defineComponent({
     cursor: default;
 }
 
+.nav-item {
+    margin: 0 0.6em;
+}
+
 .v-enter-active,
 .v-leave-active {
     transition: opacity 0.2s ease-in-out;
@@ -223,14 +232,12 @@ export default defineComponent({
     #desktop-nav {
         display: flex !important;
         flex-direction: row;
-        flex-basis: 70%;
     }
 
     #desktop-nav .nav-menu {
         display: flex !important;
         flex-direction: row;
         justify-content: space-between;
-        padding: 0 0.75em;
         width: 100% !important;
         max-width: 550px !important;
     }
