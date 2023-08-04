@@ -84,6 +84,7 @@ export default defineComponent({
     justify-content: space-between;
     align-items: center;
     padding: 23px 25px;
+    transition: color 0.5s, background-color 0.5s;
 }
 
 #site-logo a {
