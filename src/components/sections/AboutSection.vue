@@ -7,12 +7,24 @@
     <div id="about-body">
         <div id="about-text">
             <p>
-                I'm Derek, a Computer Systems Technology student at the British Columbia Institute
-                of Technology (BCIT) with a passion for using technology to solve real-world problems. Prior to my tech
-                journey, I had a background in business administration and marketing
-                automation working with companies such as <a href="https://www.ceridian.com/" target="_blank">Ceridian</a>,
-                <a href="https://www.rockymountaineer.com/" target="_blank">Rocky Mountaineer</a>, and <a
-                    href="https://www.spud.ca/" target="_blank">Spud</a>.
+                I'm Derek, an experienced professional from Vancouver, Canada with a passion for using technology to
+                solve real-world problems.
+            </p>
+            <p>
+                After completing my Bachelor of Business Administration at Simon Fraser University, I spent years
+                crafting intricate marketing programs for hospitality, e-commerce, retail, and SaaS organizations. Along the
+                way, I discovered a passion for the technical facets of my work and a knack for creative problem-solving.
+            </p>
+            <p>
+                My curiosity led me to self-learn programming on platforms like Codecademy and Udacity, followed by a
+                part-time course at Lighthouse Labs. Fuelled by a desire for mastery, I finally took the leap of
+                immersing myself in the rigorous Computer Systems Technology program at the British Columbia Institute of
+                Technology.
+            </p>
+            <p>
+                If you'd like to chat over coffee—virtually or in real life—feel free to reach out on <a
+                    href="https://www.linkedin.com/in/derekology/">LinkedIn</a> or by <a href="mailto:me@derekw.co"
+                    target="_blank">email</a>.
             </p>
             <div id="about-certifications">
                 <ProfileCertifications />
