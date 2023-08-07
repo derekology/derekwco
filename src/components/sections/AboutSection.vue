@@ -17,14 +17,14 @@
             </p>
             <p>
                 My curiosity led me to self-learn programming on platforms like Codecademy and Udacity, followed by a
-                part-time course at Lighthouse Labs. Fuelled by a desire for mastery, I finally took the leap of
+                part-time course at Lighthouse Labs. Fuelled by a desire for mastery, I finally took the leap by
                 immersing myself in the rigorous Computer Systems Technology program at the British Columbia Institute of
                 Technology.
             </p>
             <p>
                 If you'd like to chat over coffee—virtually or in real life—feel free to reach out on <a
-                    href="https://www.linkedin.com/in/derekology/">LinkedIn</a> or by <a href="mailto:me@derekw.co"
-                    target="_blank">email</a>.
+                    href="https://www.linkedin.com/in/derekology/" target="_blank">LinkedIn</a> or by <a
+                    href="mailto:me@derekw.co" target="_blank">email</a>.
             </p>
             <div id="about-certifications">
                 <ProfileCertifications />
