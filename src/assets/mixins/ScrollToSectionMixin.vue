@@ -16,7 +16,7 @@ export default defineComponent({
             const desiredElement: HTMLElement | null = document.querySelector(`#${desiredSection.toLowerCase()}-section`)
 
             if (desiredElement && desiredElement.dataset.sectionName !== currentSection) {
-                const elementLocation = desiredElement?.getBoundingClientRect().top + window.pageYOffset + offset;
+                const elementLocation = desiredElement?.getBoundingClientRect().top + window.scrollY + offset;
 
                 window.scrollTo({
                     top: elementLocation,
