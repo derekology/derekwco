@@ -224,7 +224,7 @@ export default defineComponent({
     display: none;
 }
 
-@media (min-width:768px) {
+@media (min-width:1024px) {
     #mobile-nav {
         display: none;
     }
@@ -239,7 +239,7 @@ export default defineComponent({
         flex-direction: row;
         justify-content: space-between;
         width: 100% !important;
-        max-width: 550px !important;
+        max-width: 675px !important;
     }
 
     #desktop-nav .nav-menu .nav-item a {
