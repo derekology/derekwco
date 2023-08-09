@@ -18,7 +18,7 @@
             <p>
                 My curiosity led me to self-learn programming on platforms like Codecademy and Udacity, followed by a
                 part-time course at Lighthouse Labs. Fuelled by a desire for mastery, I finally took the leap by
-                immersing myself in the rigorous Computer Systems Technology program at the British Columbia Institute of
+                immersing myself in the intensive Computer Systems Technology program at the British Columbia Institute of
                 Technology.
             </p>
             <p>
@@ -26,9 +26,6 @@
                     href="https://www.linkedin.com/in/derekology/" target="_blank">LinkedIn</a> or by <a
                     href="mailto:me@derekw.co" target="_blank">email</a>.
             </p>
-            <div id="about-certifications">
-                <ProfileCertifications />
-            </div>
         </div>
         <div id="about-social-buttons">
             <SocialButtons />
@@ -40,7 +37,6 @@
 import { defineComponent } from 'vue';
 import SocialButtons from '@/components/partials/ButtonSocial.vue';
 import ProfilePicture from '@/components/partials/ProfilePicture.vue';
-import ProfileCertifications from '@/components/partials/ProfileCertifications.vue';
 
 export default defineComponent({
     name: 'AboutSection',
@@ -48,7 +44,6 @@ export default defineComponent({
     components: {
         SocialButtons,
         ProfilePicture,
-        ProfileCertifications,
     },
 });
 </script>
@@ -79,7 +74,6 @@ export default defineComponent({
 #about-text {
     background-color: var(--color-border);
     border-radius: 20px;
-    max-width: 90%;
     padding: 75px 5% 35px;
 }
 
