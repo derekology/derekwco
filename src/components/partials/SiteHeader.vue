@@ -1,12 +1,6 @@
 <template>
     <div id="site-header">
         <div id="site-logo">
-            <a v-on:click="scrollToTop();" id="logo-icon" class="hover-hand">
-                <AbbrevLogo />
-            </a>
-        </div>
-        <span id="site-nav">
-            <SiteNav :currentSection="currentSection" :allSections="allSections" />
             <span id="colour-scheme-toggle">
                 <a v-if="darkModeEnabled" v-on:click="changeDarkModeEnabled();" class="hover-hand">
                     <LightModeIcon />
@@ -15,6 +9,12 @@
                     <DarkModeIcon />
                 </a>
             </span>
+            <a v-on:click="scrollToTop();" id="logo-icon" class="hover-hand">
+                <AbbrevLogo />
+            </a>
+        </div>
+        <span id="site-nav">
+            <SiteNav :currentSection="currentSection" :allSections="allSections" />
         </span>
     </div>
 </template>
@@ -93,24 +93,23 @@ export default defineComponent({
     align-items: center;
 }
 
-#site-nav {
+#site-logo {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: left;
 }
 
-#site-nav #colour-scheme-toggle {
-    margin: 10px 20px 0 20px;
+#colour-scheme-toggle {
+    margin: 5px 20px 0 30px;
 }
 
-#site-nav #colour-scheme-toggle svg {
+#colour-scheme-toggle svg {
     transform: scale(0.8);
 }
 
 #site-logo #logo-icon {
     width: 70px;
-    margin-right: 5px;
     padding-bottom: 0px;
 }
 </style>
