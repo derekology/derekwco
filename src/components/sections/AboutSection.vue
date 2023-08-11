@@ -16,10 +16,9 @@
                 way, I discovered a passion for the technical facets of my work and a knack for creative problem-solving.
             </p>
             <p>
-                My curiosity led me to self-learn programming on platforms like Codecademy and Udacity, followed by a
-                part-time course at Lighthouse Labs. Fuelled by a desire for mastery, I finally took the leap by
-                immersing myself in the intensive Computer Systems Technology program at the British Columbia Institute of
-                Technology.
+                My curiosity led me to self-learn programming on Codecademy and Udacity, followed by an intro
+                course at Lighthouse Labs. Fuelled by a desire for mastery, I finally took the leap by immersing myself in
+                the intensive Computer Systems Technology program at the British Columbia Institute of Technology.
             </p>
             <p>
                 If you'd like to chat over coffee—virtually or in real life—feel free to reach out on <a
@@ -74,7 +73,8 @@ export default defineComponent({
 #about-text {
     background-color: var(--color-border);
     border-radius: 20px;
-    padding: 75px 5% 35px;
+    padding: 75px 25px 35px;
+    margin: 0 10px;
 }
 
 #about-text p {
