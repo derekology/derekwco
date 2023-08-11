@@ -30,7 +30,7 @@ export default defineComponent({
                     title: 'Marketo Engage Expert',
                     issuingOrganization: 'Adobe',
                     description:
-                        'Certified in strategizing, executing, and analyzing data-driven marketing campaigns using Marketo\'s robust automation tools.',
+                        'Certified in strategizing, executing, and analyzing data-driven marketing campaigns using Marketo\'s automation tools.',
                     image: '/assets/cert-adobe-mce.png',
                     imageAlt: 'Adobe Marketo Engage Expert Certification Badge',
                     imageTitle: 'Adobe Marketo Engage Expert Certification',
@@ -39,7 +39,7 @@ export default defineComponent({
                     id: 'cert-salesforce-mca',
                     title: 'Marketing Cloud Administrator',
                     issuingOrganization: 'Salesforce',
-                    description: 'Certified in administrating Salesforce Marketing Cloud through building campaigns, optimizing journeys, and managing data.',
+                    description: 'Certified in building campaigns, optimizing journeys, and managing data flows using Salesforce Marketing Cloud.',
                     image: '/assets/cert-salesforce-mca.png',
                     imageAlt: 'Salesforce Marketing Cloud Administrator Certification Badge',
                     imageTitle: 'Salesforce Marketing Cloud Administrator Certification',
@@ -56,7 +56,7 @@ export default defineComponent({
     flex-wrap: wrap;
     justify-content: center;
     align-items: stretch;
-    padding: 3em 0;
+    padding: 2.5em 0;
 }
 
 p {
@@ -66,8 +66,9 @@ p {
 }
 
 img {
-    height: 70px;
+    max-height: 70px;
     margin-left: 20px;
+    max-width: 100%;
 }
 
 .certification-tile {
