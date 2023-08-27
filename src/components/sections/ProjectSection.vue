@@ -35,16 +35,23 @@ export default defineComponent({
                 {
                     name: 'Outfit Picker',
                     image: '/assets/projects/outfit-picker/1.png',
-                    description: 'Weather-aware outfit picker using the MERN stack. Rewrite of my first personal project (that used Vue, GraphQL, and Postgres) focusing on organization and documentation.',
+                    description: 'Weather-aware outfit picker using the MERN stack. Rewrite of my first personal project (that used Vue.js, GraphQL, and Postgres) focusing on organization and documentation.',
                     technologies: ['MongoDB', 'Express.js', 'React', 'Node.js'],
                     link: 'https://outfitpicker.wooprojects.com/'
                 },
                 {
-                    name: 'Pass The Class', 
+                    name: 'Pass The Class',
                     image: '/assets/projects/pass-the-class/1.png',
                     description: 'CLI-based dungeon game themed as a college course. Created for a programming class, the focus was on organization, decomposition, documentation, and testing.',
                     technologies: ['Python'],
                     link: 'https://github.com/derekology/Pass-The-Class-CLI-Game/'
+                },
+                {
+                    name: '> cmdpedia',
+                    image: '/assets/projects/cmdpedia/1.png',
+                    description: 'Quick reference guide for command syntaxes. Created to better understand stores and data structures, as well as to become more familiar with the command line.',
+                    technologies: ['Vue.js', 'Pinia', 'Postgres', 'Supabase'],
+                    link: 'https://cmdpedia.wooprojects.com/'
                 },
                 {
                     name: '::musings',
@@ -59,13 +66,6 @@ export default defineComponent({
                     description: 'MVP for an OpenAI-powered Michelin restaurant recommendation app. Working in a team of four, I built the map, details, itinerary, and easter egg features.',
                     technologies: ['EJS', 'OpenAI API', 'Leaflet.js', 'MongoDB', 'Node.js', 'Express.js'],
                     link: 'https://tabletrek.cyclic.app/'
-                },
-                {
-                    name: 'Peerspace',
-                    image: '/assets/projects/peerspace/1.png',
-                    description: 'MVP for a mental health and networking app for professionals. Created in a team of five for the 24-hour Hack The Break 2023. I worked on the survey function and styling.',
-                    technologies: ['Javascript', 'HTML', 'CSS', 'Firebase'],
-                    link: 'https://devpost.com/software/peerspace-73vkj9/'
                 },
                 {
                     name: 'myMKTO',
