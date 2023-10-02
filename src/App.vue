@@ -6,6 +6,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import { RouterView } from 'vue-router';
+import { pageview } from 'vue-gtag';
 
 export default defineComponent({
   name: 'App',
@@ -22,6 +23,7 @@ export default defineComponent({
 
   mounted() {
     this.determineInitialColourScheme();
+    this.trackGA4();
     console.log(`Hi developer - welcome to my portfolio! If you're curious, this website was built using Vue.js.\n\nPlease let me know if you have any feedback or encounter any bugs!`);
   },
 
@@ -30,6 +32,13 @@ export default defineComponent({
   },
 
   methods: {
+    trackGA4() {
+      /**
+       * Send the current route to gtag.
+       */
+      pageview({ page_path: '/', page_title: 'Home' });
+    },
+
     toggleDarkModeEnabled(): void {
       /**
        * Toggle the dark mode enabled state.
