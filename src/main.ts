@@ -12,6 +12,6 @@ const vueGtagOptions = {
 };
 
 app.use(VueGtag, vueGtagOptions);
-app.use(router)
+app.use(router);
 
-app.mount('#app')
+app.mount('#app');
