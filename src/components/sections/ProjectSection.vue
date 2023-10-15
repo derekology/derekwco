@@ -35,8 +35,8 @@ export default defineComponent({
                 {
                     name: 'Outfit Picker',
                     image: '/assets/projects/outfit-picker/1.png',
-                    description: 'Weather-aware outfit picker using the MERN stack. Rewrite of my first personal project (that used Vue.js, GraphQL, and Postgres) focusing on organization and documentation.',
-                    technologies: ['MongoDB', 'Express.js', 'React', 'Node.js'],
+                    description: 'OpenAI-powered weather-aware outfit picker using the MERN stack. Rewrite of an older project that used Vue.js, GraphQL, and Postgres, focusing on organization and documentation.',
+                    technologies: ['OpenAI', 'MongoDB', 'Express.js', 'React', 'Node.js'],
                     link: 'https://outfitpicker.wooprojects.com/'
                 },
                 {
@@ -64,7 +64,7 @@ export default defineComponent({
                     name: 'TableTrek',
                     image: '/assets/projects/tabletrek/1.png',
                     description: 'MVP for an OpenAI-powered Michelin restaurant recommendation app. Working in a team of four, I built the map, details, itinerary, and easter egg features.',
-                    technologies: ['EJS', 'OpenAI API', 'Leaflet.js', 'MongoDB', 'Node.js', 'Express.js'],
+                    technologies: ['EJS', 'OpenAI', 'Leaflet.js', 'MongoDB', 'Node.js', 'Express.js'],
                     link: 'https://tabletrek.cyclic.app/'
                 },
                 {
