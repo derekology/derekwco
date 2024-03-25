@@ -11,21 +11,21 @@
         <IntroSection />
       </div>
     </div>
-    <div id="projects-section" class="section" data-section-name="Projects" ref="projects">
+    <!-- <div id="projects-section" class="section" data-section-name="Projects" ref="projects">
       <div class="section-body">
         <ProjectSection />
       </div>
-    </div>
+    </div> -->
     <div id="skills-section" class="section" data-section-name="Skills" ref="skills">
       <div class="section-body">
         <SkillSection />
       </div>
     </div>
-    <div id="certs-section" class="section" data-section-name="Certs" ref="certs">
+    <!-- <div id="certs-section" class="section" data-section-name="Certs" ref="certs">
       <div class="section-body">
         <CertSection />
       </div>
-    </div>
+    </div> -->
     <div id="about-section" class="section" data-section-name="About" ref="about">
       <div class="section-body">
         <AboutSection />
@@ -39,9 +39,9 @@ import { defineComponent } from 'vue';
 import AnimatedComponent from '@/components/partials/AnimatedComponent.vue';
 import SiteHeader from '@/components/partials/SiteHeader.vue';
 import IntroSection from '@/components/sections/IntroSection.vue';
-import ProjectSection from '@/components/sections/ProjectSection.vue';
+// import ProjectSection from '@/components/sections/ProjectSection.vue';
 import SkillSection from '@/components/sections/SkillSection.vue';
-import CertSection from '@/components/sections/CertSection.vue';
+// import CertSection from '@/components/sections/CertSection.vue';
 import AboutSection from '@/components/sections/AboutSection.vue';
 
 export default defineComponent({
@@ -58,9 +58,9 @@ export default defineComponent({
     SiteHeader,
     AnimatedComponent,
     IntroSection,
-    ProjectSection,
+    // ProjectSection,
     SkillSection,
-    CertSection,
+    // CertSection,
     AboutSection,
   },
 
