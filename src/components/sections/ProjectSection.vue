@@ -13,9 +13,10 @@
                     <p>{{ project.description }}</p>
                     <div class="project-technologies">
                         <span class="project-technology" v-for="technology in project.technologies" :key="technology">{{
-                            technology }}</span>
+            technology }}</span>
                     </div>
-                    <div v-show="project.link" class="project-link"><a :href="project.link" target="_blank">View Project</a>
+                    <div v-show="project.link" class="project-link"><a :href="project.link" target="_blank">View
+                            Project</a>
                     </div>
                 </div>
             </div>
@@ -40,11 +41,11 @@ export default defineComponent({
                     link: 'https://outfitpicker.wooprojects.com/?utm_source=derekwco&utm_medium=portfolio'
                 },
                 {
-                    name: 'Pass The Class',
-                    image: '/assets/projects/pass-the-class/1.png',
-                    description: 'CLI-based dungeon game themed as a college course. Created for a programming class, the focus was on organization, decomposition, documentation, and testing.',
-                    technologies: ['Python'],
-                    link: 'https://github.com/derekology/Pass-The-Class-CLI-Game/'
+                    name: 'Tasks',
+                    image: '/assets/projects/tasks/1.png',
+                    description: 'To-do list management application written in PyQT. I wanted to learn desktop application development while building a tool that helps me stay organized.',
+                    technologies: ['Python', 'PyQT'],
+                    link: 'https://github.com/derekology/tasks/'
                 },
                 {
                     name: '> cmdpedia',
