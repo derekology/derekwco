@@ -6,15 +6,19 @@
         </p>
         <span class="section-header">Automation / Scripting</span>
         <p>
-            Python, JavaScript, Selenium, Twill, Bash, AMPScript, SSJS, Velocity
+            JavaScript, Bash, Groovy, Selenium, Twill, AMPScript, SSJS, Velocity
         </p>
         <span class="section-header">Databases</span>
         <p>
-            SQL, Microsoft SQL Server, GraphQL, PostgreSQL, NoSQL, MongoDB, Google Firestore, Supabase
+            SQL, Microsoft SQL Server, PostgreSQL, GraphQL, NoSQL, MongoDB, Google Firestore, Supabase
+        </p>
+        <span class="section-header">DevOps</span>
+        <p>
+            Git, Github, BitBucket, SourceTree, Jenkins, Ansible
         </p>
         <span class="section-header">Software / Platforms</span>
         <p>
-            Git, Github, SourceTree, Wordpress, Linux, Windows, Adobe Marketo Engage, Salesforce Marketing / Sales Cloud,
+            Wordpress, Linux, Windows, Adobe Marketo Engage, Salesforce Marketing / Sales Cloud,
             MailChimp, MailerLite
         </p>
     </div>
