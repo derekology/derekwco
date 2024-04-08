@@ -26,6 +26,15 @@ export default defineComponent({
         return {
             certifications: [
                 {
+                    id: 'cert-msazure-az900',
+                    title: 'Azure Fundamentals',
+                    issuingOrganization: 'Microsoft',
+                    description: 'Certified in understanding cloud concepts, as well as Microsoft Azure architecture, services, management, and governance.',
+                    image: '/assets/cert-msazure-az900.png',
+                    imageAlt: 'Microsoft Azure Fundamentals Certification Badge',
+                    imageTitle: 'Microsoft Azure Fundamentals Administrator Certification',
+                },
+                {
                     id: 'cert-adobe-mce',
                     title: 'Marketo Engage Expert',
                     issuingOrganization: 'Adobe',
