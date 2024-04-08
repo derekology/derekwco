@@ -2,8 +2,8 @@
   <main>
     <div id="site-header-container" v-show="currentSection !== 'Intro'">
       <animated-component animationType="fade">
-        <SiteHeader :currentSection="currentSection" :allSections="allSections" @passDarkModeEnabled="passDarkModeEnabled"
-          :darkModeEnabled="darkModeEnabled" />
+        <SiteHeader :currentSection="currentSection" :allSections="allSections"
+          @passDarkModeEnabled="passDarkModeEnabled" :darkModeEnabled="darkModeEnabled" />
       </animated-component>
     </div>
     <div id="intro-section" class="section" data-section-name="Intro" ref="intro">
@@ -21,11 +21,11 @@
         <SkillSection />
       </div>
     </div>
-    <!-- <div id="certs-section" class="section" data-section-name="Certs" ref="certs">
+    <div id="certs-section" class="section" data-section-name="Certs" ref="certs">
       <div class="section-body">
         <CertSection />
       </div>
-    </div> -->
+    </div>
     <div id="about-section" class="section" data-section-name="About" ref="about">
       <div class="section-body">
         <AboutSection />
@@ -41,7 +41,7 @@ import SiteHeader from '@/components/partials/SiteHeader.vue';
 import IntroSection from '@/components/sections/IntroSection.vue';
 // import ProjectSection from '@/components/sections/ProjectSection.vue';
 import SkillSection from '@/components/sections/SkillSection.vue';
-// import CertSection from '@/components/sections/CertSection.vue';
+import CertSection from '@/components/sections/CertSection.vue';
 import AboutSection from '@/components/sections/AboutSection.vue';
 
 export default defineComponent({
@@ -60,7 +60,7 @@ export default defineComponent({
     IntroSection,
     // ProjectSection,
     SkillSection,
-    // CertSection,
+    CertSection,
     AboutSection,
   },
 
