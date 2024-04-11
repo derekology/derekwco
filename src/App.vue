@@ -32,32 +32,32 @@ export default defineComponent({
   },
 
   methods: {
+    /**
+     * Sends the current route to gtag.
+     */
     trackGA4() {
-      /**
-       * Send the current route to gtag.
-       */
       pageview({ page_path: '/', page_title: 'Home' });
     },
 
+    /**
+     * Toggles the dark mode enabled state.
+     */
     toggleDarkModeEnabled(): void {
-      /**
-       * Toggle the dark mode enabled state.
-       */
       this.darkModeEnabled = !this.darkModeEnabled;
     },
 
+    /**
+     * Determines the initial colour scheme based on the user's preference.
+     */
     determineInitialColourScheme(): void {
-      /**
-       * Determine the initial colour scheme based on the user's preference.
-       */
       window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? this.darkModeEnabled = true : this.darkModeEnabled = false;
       this.updateColourScheme();
     },
 
+    /**
+     * Updates the colour scheme based on the dark mode enabled state.
+     */
     updateColourScheme(): void {
-      /**
-       * Update the colour scheme based on the dark mode enabled state.
-       */
       const root: HTMLElement | null = document.querySelector(':root');
 
       if (this.darkModeEnabled) {

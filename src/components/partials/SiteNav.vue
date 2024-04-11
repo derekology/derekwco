@@ -56,12 +56,12 @@ export default defineComponent({
     },
 
     computed: {
+        /**
+         * Returns an array of all sections except the current section.
+         * 
+         * @returns {Array<string>} - An array of all sections except the current section
+         */
         inactiveSections: function (): Array<string> {
-            /**
-             * Return an array of all sections except the current section.
-             * 
-             * @returns {Array<string>} - An array of all sections except the current section
-             */
             var modifiedSections = this.allSections.filter((section: string) => section !== this.currentSection);
             modifiedSections.unshift(this.currentSection)
 
@@ -70,10 +70,10 @@ export default defineComponent({
     },
 
     methods: {
+        /**
+         * Removes the active class from the previous section and menu item.
+         */
         clearPastActive(): void {
-            /**
-             * Remove the active class from the previous section and menu item.
-             */
             const pastActive: NodeListOf<HTMLElement> = document.querySelectorAll('.active');
             const pastActiveItem: NodeListOf<HTMLElement> = document.querySelectorAll('.active-menu-item');
 
@@ -86,10 +86,10 @@ export default defineComponent({
             });
         },
 
+        /**
+         * Adds the active class to the current section and menu item.
+         */
         markCurrentActive(): void {
-            /**
-             * Add the active class to the current section and menu item.
-             */
             const activeItem: NodeListOf<HTMLElement> = document.querySelectorAll(`#${this.currentSection}`);
             const activeMenuItem: NodeListOf<HTMLElement> = document.querySelectorAll('.nav-item');
 
@@ -102,20 +102,20 @@ export default defineComponent({
             }
         },
 
+        /**
+         * Removes the active class from the previous section and add it to the current section.
+         */
         manageActiveClass(): void {
-            /**
-             * Remove the active class from the previous section and add it to the current section.
-             */
             this.clearPastActive();
             this.markCurrentActive();
         },
 
+        /**
+         * Scrolls to the clicked section if it's not the current section.
+         * 
+         * @param {string} desiredSection - The section to scroll to
+         */
         scrollToSection(desiredSection: string): void {
-            /**
-             * Scroll to the clicked section if it's not the current section.
-             * 
-             * @param {string} desiredSection - The section to scroll to
-             */
             if (desiredSection !== this.currentSection) {
                 ScrollToSectionMixin.methods?.scrollToSection(desiredSection, this.currentSection, -52); // Call the global Mixin to scroll to desired section
                 this.showMenu = false;

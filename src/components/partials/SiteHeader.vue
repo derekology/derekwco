@@ -59,17 +59,17 @@ export default defineComponent({
     },
 
     methods: {
+        /**
+         * Scrolls to the top section.
+         */
         scrollToTop(): void {
-            /**
-             * Scroll to the top section.
-             */
             ScrollToSectionMixin.methods?.scrollToSection('intro', this.currentSection, -120); // Call the global Mixin to scroll to top section
         },
 
+        /**
+         * Changes the dark mode enabled state.
+         */
         changeDarkModeEnabled(): void {
-            /**
-             * Change the dark mode enabled state.
-             */
             this.$emit('passDarkModeEnabled');
         },
     }

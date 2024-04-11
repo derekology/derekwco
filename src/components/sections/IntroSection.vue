@@ -34,10 +34,10 @@ export default defineComponent({
     ],
 
     methods: {
+        /**
+         * Animates the logo in the intro section.
+         */
         animateLogo(): void {
-            /**
-             * Animate the logo in the intro section.
-             */
             const logo = document.getElementById('intro-logo');
             if (logo) {
                 logo.animate([
@@ -79,10 +79,10 @@ export default defineComponent({
             }
         },
 
+        /**
+         * Animates the other elements in the intro section.
+         */
         animateOtherElements(): void {
-            /**
-             * Animate the other elements in the intro section.
-             */
             const tagline = document.getElementById('intro-tagline');
             const socialButtons = document.getElementById('social-buttons');
             const downArrow = document.getElementById('down-arrow');
@@ -118,18 +118,18 @@ export default defineComponent({
             }
         },
 
+        /**
+         * Animates the intro section.
+         */
         animateIntro(): void {
-            /**
-             * Animate the intro section.
-             */
             this.animateLogo();
             this.animateOtherElements();
         },
 
+        /**
+         * Scrolls to the next section.
+         */
         scrollToNextSection(): void {
-            /**
-             * Scroll to the next section.
-             */
             ScrollToSectionMixin.methods?.scrollToSection('skills', 'intro', 48); // Call the global Mixin to scroll to the next section
         },
     },

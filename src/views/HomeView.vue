@@ -72,47 +72,47 @@ export default defineComponent({
   },
 
   computed: {
+    /**
+     * Returns an array of all sections to be shown in the menu.
+     * 
+     * @returns {string[]} - An array of all items to be shown in the menu
+     */
     allSections(): string[] {
-      /**
-       * Return an array of all sections to be shown in the menu.
-       * 
-       * @returns {string[]} - An array of all items to be shown in the menu
-       */
       return this.getMenuItems();
     }
   },
 
   methods: {
+    /**
+     * Passes the dark mode enabled state from child.
+     */
     passDarkModeEnabled(): void {
-      /**
-       * Pass the dark mode enabled state from child.
-       */
       this.$emit('toggleDarkModeEnabled');
     },
 
+    /**
+     * Returns a list of all sections on the page.
+     * 
+     * @returns {NodeListOf<HTMLElement>} - A list of all sections
+     */
     getAllSections(): NodeListOf<HTMLElement> {
-      /**
-       * Return a list of all sections on the page.
-       * 
-       * @returns {NodeListOf<HTMLElement>} - A list of all sections
-       */
       return document.querySelectorAll('.section');
     },
 
+    /**
+     * Updates the threshold for the IntersectionObserver if the screen height has changed.
+     */
     updateThresholdOnViewportHeightChange(): void {
-      /**
-       * Update the threshold for the IntersectionObserver if the screen height has changed.
-       */
       if (this.viewportHeight != window.innerHeight) {
         this.viewportHeight = window.innerHeight;
         this.getCurrentSection();
       }
     },
 
+    /**
+     * Sets the current section based on the section that is in view.
+     */
     getCurrentSection(): void {
-      /**
-       * Set the current section based on the section that is in view.
-       */
       const activeSectionThresholdPercentage: number = 0.55;
       const allSections: NodeListOf<HTMLElement> = this.getAllSections();
       const activeSectionThreshold: number = this.viewportHeight * activeSectionThresholdPercentage
@@ -136,12 +136,12 @@ export default defineComponent({
       });
     },
 
+    /**
+     * Returns an array of all sections to be shown in the menu.
+     * 
+     * @returns {string[]} - An array of all items to be shown in the menu
+     */
     getMenuItems(): string[] {
-      /**
-       * Return an array of all sections to be shown in the menu.
-       * 
-       * @returns {string[]} - An array of all items to be shown in the menu
-       */
       const allSections: NodeListOf<HTMLElement> = this.getAllSections();
       const menuItems: string[] = [];
 
