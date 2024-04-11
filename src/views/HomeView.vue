@@ -2,8 +2,8 @@
   <main>
     <div id="site-header-container" v-show="currentSection !== 'Intro'">
       <animated-component animationType="fade">
-        <SiteHeader :currentSection="currentSection" :allSections="allSections"
-          @passDarkModeEnabled="passDarkModeEnabled" :darkModeEnabled="darkModeEnabled" />
+        <SiteHeader :currentSection="currentSection" :allSections="allSections" @passDarkModeEnabled="passDarkModeEnabled"
+          :darkModeEnabled="darkModeEnabled" />
       </animated-component>
     </div>
     <div id="intro-section" class="section" data-section-name="Intro" ref="intro">
@@ -113,10 +113,14 @@ export default defineComponent({
       /**
        * Set the current section based on the section that is in view.
        */
+      const activeSectionThresholdPercentage: number = 0.55;
       const allSections: NodeListOf<HTMLElement> = this.getAllSections();
+      const activeSectionThreshold: number = this.viewportHeight * activeSectionThresholdPercentage
 
       allSections.forEach((section: HTMLElement) => {
-        const threshold = this.viewportHeight > 768 ? 0.55 : 0.25;
+        const sectionHeight: number = section.offsetHeight;
+        const threshold = Math.min(activeSectionThreshold / sectionHeight, activeSectionThresholdPercentage);
+
         const observer = new IntersectionObserver(
           ([entry]) => {
             if (entry.isIntersecting && section.dataset.sectionName) {
@@ -125,7 +129,8 @@ export default defineComponent({
           },
           {
             threshold: threshold,
-          });
+          }
+        );
 
         observer.observe(section);
       });
