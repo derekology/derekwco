@@ -119,7 +119,7 @@ export default defineComponent({
 
       allSections.forEach((section: HTMLElement) => {
         const sectionHeight: number = section.offsetHeight;
-        const threshold = Math.min(activeSectionThreshold / sectionHeight, activeSectionThresholdPercentage);
+        const threshold: number = Math.min(activeSectionThreshold / sectionHeight, activeSectionThresholdPercentage);
 
         const observer = new IntersectionObserver(
           ([entry]) => {
@@ -131,7 +131,6 @@ export default defineComponent({
             threshold: threshold,
           }
         );
-
         observer.observe(section);
       });
     },
