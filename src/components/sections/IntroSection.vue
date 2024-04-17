@@ -130,7 +130,7 @@ export default defineComponent({
          * Scrolls to the next section.
          */
         scrollToNextSection(): void {
-            ScrollToSectionMixin.methods?.scrollToSection('skills', 'intro', 48); // Call the global Mixin to scroll to the next section
+            ScrollToSectionMixin.methods?.scrollToSection('projects', 'intro', 48); // Call the global Mixin to scroll to the next section
         },
     },
 
