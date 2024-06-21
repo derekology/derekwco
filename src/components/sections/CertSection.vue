@@ -26,20 +26,28 @@ export default defineComponent({
         return {
             certifications: [
                 {
+                    id: 'cert-msazure-ai102',
+                    title: 'Azure AI Engineer',
+                    issuingOrganization: 'Microsoft',
+                    description: 'Certified in leveraging Azure services for computer vision, natural language processing, and other AI functionalities.',
+                    image: '/assets/cert-msazure-ai102.png',
+                    imageAlt: 'Microsoft Azure Fundamentals Certification Badge',
+                    imageTitle: 'Microsoft Azure AI Engineer Associate Certification',
+                },
+                {
                     id: 'cert-msazure-az900',
                     title: 'Azure Fundamentals',
                     issuingOrganization: 'Microsoft',
                     description: 'Certified in understanding cloud concepts, as well as Microsoft Azure architecture, services, management, and governance.',
                     image: '/assets/cert-msazure-az900.png',
                     imageAlt: 'Microsoft Azure Fundamentals Certification Badge',
-                    imageTitle: 'Microsoft Azure Fundamentals Administrator Certification',
+                    imageTitle: 'Microsoft Azure Fundamentals Certification',
                 },
                 {
                     id: 'cert-adobe-mce',
                     title: 'Marketo Engage Expert',
                     issuingOrganization: 'Adobe',
-                    description:
-                        'Certified in strategizing, executing, and analyzing data-driven marketing campaigns using Marketo\'s automation tools.',
+                    description: 'Certified in strategizing, executing, and analyzing data-driven marketing campaigns using Marketo\'s automation tools.',
                     image: '/assets/cert-adobe-mce.png',
                     imageAlt: 'Adobe Marketo Engage Expert Certification Badge',
                     imageTitle: 'Adobe Marketo Engage Expert Certification',
