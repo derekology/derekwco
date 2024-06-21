@@ -13,7 +13,7 @@
                     <p>{{ project.description }}</p>
                     <div class="project-technologies">
                         <span class="project-technology" v-for="technology in project.technologies" :key="technology">{{
-                            technology }}</span>
+            technology }}</span>
                     </div>
                     <div v-show="project.link" class="project-link"><a :href="project.link" target="_blank">View
                             Project</a>
@@ -33,13 +33,6 @@ export default defineComponent({
     data() {
         return {
             projects: [
-                // {
-                //     name: 'Outfit Picker',
-                //     image: '/assets/projects/outfit-picker/1.png',
-                //     description: 'OpenAI-powered weather-aware outfit picker using the MERN stack. Rewrite of an older project that used Vue.js, GraphQL, and Postgres, focusing on organization and documentation.',
-                //     technologies: ['OpenAI', 'MongoDB', 'Express.js', 'React', 'Node.js'],
-                //     link: 'https://outfitpicker.wooprojects.com/?utm_source=derekwco&utm_medium=portfolio'
-                // },
                 {
                     name: 'Tasks',
                     image: '/assets/projects/tasks/1.png',
@@ -48,11 +41,11 @@ export default defineComponent({
                     link: 'https://github.com/derekology/tasks/'
                 },
                 {
-                    name: '> cmdpedia',
-                    image: '/assets/projects/cmdpedia/1.png',
-                    description: 'Quick reference guide for command syntaxes. Created to better understand stores and data structures, as well as to become more familiar with the command line.',
-                    technologies: ['Vue.js', 'Pinia', 'Postgres', 'Supabase'],
-                    link: 'https://cmdpedia.wooprojects.com/?utm_source=derekwco&utm_medium=portfolio'
+                    name: 'Simple Git Hooks',
+                    image: '/assets/projects/simple-git-hooks/1.png',
+                    description: 'Simple Git hooks to make development a little easier. For use with the pre-commit Python application.',
+                    technologies: ['Python', 'Git'],
+                    link: 'https://github.com/derekology/simple-git-hooks/'
                 },
                 {
                     name: '::musings',
@@ -61,13 +54,6 @@ export default defineComponent({
                     technologies: ['Vue.js', 'Bootstrap', 'Wordpress', 'REST API'],
                     link: 'https://musings.wooprojects.com/?utm_source=derekwco&utm_medium=portfolio'
                 },
-                // {
-                //     name: 'TableTrek',
-                //     image: '/assets/projects/tabletrek/1.png',
-                //     description: 'MVP for an OpenAI-powered Michelin restaurant recommendation app. Working in a team of four, I built the map, details, itinerary, and easter egg features.',
-                //     technologies: ['EJS', 'OpenAI', 'Leaflet.js', 'MongoDB', 'Node.js', 'Express.js'],
-                //     link: 'https://tabletrek.cyclic.app/?utm_source=derekwco&utm_medium=portfolio'
-                // },
                 {
                     name: 'myMKTO',
                     image: '/assets/projects/mymkto/1.png',
